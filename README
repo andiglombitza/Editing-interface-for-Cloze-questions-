@@ -1,0 +1,17 @@
+INSTALLATION:
+
+
+1. Unzip
+2. copy to your moodleroot directory, keeping the directory structure
+
+These files will be overwritten:
+
+lib/weblib.php *
+lib/editor/htmlarea/htmlarea.php
+lib/editor/htmlarea/dialog.js
+
+* Overwriting weblib.php is OPTIONAL: 
+
+If you choose to include this modified weblib.php, the CLOZE-editor button will only show for teachers, and only in quiz-question-interfaces. In any other editor instances, and for students, it will be hidden.
+
+If you refrain from overwriting weblib.php, it will still work, but the editor button will be visible in EVERY editor instance for teachers, but not for students.
