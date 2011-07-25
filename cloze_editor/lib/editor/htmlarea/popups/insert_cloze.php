@@ -250,7 +250,7 @@ span.helplink img {
 if(isset($_POST['points'])) {
     $value_points = 'value="'.$_POST['points'].'"';
 } else {
-//Wenn kein Wert übernommen, dann 1 Punkt als default nehmen ANDI
+//Wenn kein Wert ï¿½bernommen, dann 1 Punkt als default nehmen ANDI
     $value_weighting = 'value="1"';
 }
 
@@ -480,7 +480,7 @@ if (isset($_POST['quiz_type'])) {
             if ($_POST['quiz_type'] == 'NUMERICAL') {
                 if (isset($_POST[$option_id.'_throttle'])) {
                     if ($_POST[$option_id.'_throttle'] != '') {
-                        $throttle_value = ':'.$_POST[$option_id.'_throttle'].':';
+                        $throttle_value = ':'.$_POST[$option_id.'_throttle'];
                     }
                 }
                 
