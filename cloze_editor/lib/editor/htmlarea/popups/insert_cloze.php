@@ -71,22 +71,30 @@ function correctness (object) {
         }
 }
 
+// This Function will toggle the color of the checkbox to define an answer as true or false
+// If the answer is true, the element's value should be 100 (percent) and readOnly, so there won't be any
+// misunderstanding between a checked box
 function setcolor(element, state) {
 	if (state == "off") {
-		//ausgrauen
+		// If the element's status is off then
+		// fill with gray background color
 		element.style.backgroundColor = "EEEEEE";
 		element.style.color = "888888";	
-		//wert auf 100 setzen
+		// set value to 100 and the element on readOnly
 		element.value = "100";
 		element.readOnly = true;
 	} else if (state == "on") {
-		//Farbe wiederherstellen
+		// If the element's status is on then
+		// restore original color
 		element.style.backgroundColor = "white";
 		element.style.color = "black";
-		if (element.value == "100") { //wenn der Wert 100 ist, soll da 0 stehen, damit nicht 100 drin steht und gleichzeitig nicht angekreuzt ist
+		if (element.value == "100") { 
+			// If the value is 100, then set it to 0.
+			// Why? Because it cannot be 100 and at the same time be false
+			// So it switches to 0 to avoid discrepancy
 			element.value = "0";
 		}
-		//element.value = "0"; //Wert auf 0 setzen
+		// Because the answer is wrong, you might want to edit the percentage of the field, so it must be writeable
 		element.readOnly = false;
 	}
 }
